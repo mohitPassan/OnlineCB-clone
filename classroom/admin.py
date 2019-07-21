@@ -4,5 +4,6 @@ from classroom import models
 # Register your models here.
 admin.site.register([
     models.Course,
-    models.Instructor
+    models.Instructor,
+    models.Content
 ])
