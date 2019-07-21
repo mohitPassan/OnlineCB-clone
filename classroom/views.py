@@ -8,3 +8,4 @@ def index(request):
         "recommended_courses": courses
     }
     return render(request, 'classroom/index.html', Context)
+

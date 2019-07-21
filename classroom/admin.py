@@ -3,5 +3,6 @@ from classroom import models
 
 # Register your models here.
 admin.site.register([
-    models.Course
+    models.Course,
+    models.Instructor
 ])
