@@ -26,3 +26,21 @@ def singleCourse(request, id):
     }
 
     return render(request, 'classroom/singleCourse.html', Context)
+
+def content(request, course_id, content_id):
+    course = models.Course.objects.get(id = course_id)
+    content = course.contents.get(id = content_id)
+
+    Context = {
+        "content": content
+    }
+
+    template_name = ''
+    if content.content_type == 'pdf':
+        template_name = 'content_pdf.html'
+    elif content.content_type == 'youtube':
+        template_name = 'content_yt.html'
+    elif content.content_type == 'image':
+        template_name = 'content_img.html'
+
+    return render(request, 'classroom/{}'.format(template_name), Context)

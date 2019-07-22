@@ -5,5 +5,8 @@ from classroom import models
 admin.site.register([
     models.Course,
     models.Instructor,
-    models.Content
+    models.Content,
+    models.PDF,
+    models.YouTubeVideos,
+    models.Image,
 ])

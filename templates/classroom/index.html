@@ -6,7 +6,9 @@
         {% for course in recommended_courses %}
             {% if course.recommended %}
                 <li>
-                    {{ course }}
+                    <a href="{% url 'get_course' course.id %}">
+                        {{ course }}
+                    </a>
                 </li>
             {% endif %}
         {% endfor %}
