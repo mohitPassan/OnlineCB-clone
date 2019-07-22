@@ -3,12 +3,12 @@
 {% block content %}
     <h1>Recomomended Courses</h1>
     <ul>
-        {% for course in recommended_courses %}
-            {% if course.recommended %}
+        {% for course in courses %}
                 <li>
                     {{ course }}
                 </li>
-            {% endif %}
         {% endfor %}
     </ul>
+    
+
 {% endblock %}

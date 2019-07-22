@@ -9,11 +9,20 @@ def index(request):
     }
     return render(request, 'classroom/index.html', Context)
 
-def course(request, id):
+def courses(request):
+    courses = models.Course.objects.all()
+
+    Context = {
+        "courses": courses
+    }
+
+    return render(request, 'classroom/courses.html', Context)
+
+def singleCourse(request, id):
     course = models.Course.objects.get(id = id)
 
     Context = {
-        "course": course
+        "course" : course
     }
 
-    return render(request, 'classroom/course.html', Context)
+    return render(request, 'classroom/singleCourse.html', Context)

@@ -1,0 +1,18 @@
+{% extends 'classroom/layouts/base.html' %}
+
+{% block content %}
+    <h1>{{ course.name }}</h1>
+    <h3>Rs. {{ course.price }}</h3>
+    <p>{{ course.description }}</p>
+    <h3>Instructor for this course: {{ course.instructor }}</h3>
+
+    <h2>Contents:</h2>
+    {% for content in course.contents.all %}
+        <ul>
+            <li>
+                {{ content }}
+            </li>
+        </ul>
+        
+    {% endfor %}
+{% endblock %}

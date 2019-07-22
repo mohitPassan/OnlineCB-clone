@@ -7,6 +7,7 @@ class Course(models.Model): #This class inherits from Model class in models modu
     price = models.FloatField()
     description = models.TextField()
     instructor = models.ForeignKey('Instructor', on_delete = models.CASCADE)
+    recommended = models.BooleanField(default = False)
     contents = models.ManyToManyField('Content')
 
     def __str__(self):
