@@ -2,6 +2,13 @@
 
 {% block content %}
     <h1>All Courses</h1>
+    <form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Search</label>
+            <input name = "query" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search Courses">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
     <ul>
         {% for course in courses %}
                 <li>
